@@ -1,0 +1,170 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #1f1c2c, #0f2027);
+  color: white;
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  padding: 20px 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+  padding: 20px;
+  gap: 20px;
+}
+
+/* GLASS PANEL BASE */
+.left, .right {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* LEFT PANEL */
+.left {
+  width: 35%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* RIGHT PANEL */
+.right {
+  width: 65%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* INPUTS */
+input, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+textarea {
+  height: 180px;
+  resize: none;
+}
+
+/* INPUT GLOW */
+input:focus, textarea:focus {
+  box-shadow: 0 0 12px #00dbde;
+}
+
+/* BUTTON */
+button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00dbde, #fc00ff);
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #fc00ff;
+}
+
+/* SNIPPET CARD */
+.snippet {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.snippet:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(252,0,255,0.3);
+}
+
+.snippet h3 {
+  margin-bottom: 8px;
+  color: #00dbde;
+}
+
+/* CODE BLOCK */
+pre {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-height: 150px;
+  font-size: 13px;
+}
+
+/* BUTTONS INSIDE CARD */
+.snippet button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* SEARCH BAR */
+.right input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* TOAST */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00dbde, #fc00ff);
+  border-radius: 10px;
+}
