@@ -116,3 +116,55 @@ button:hover {
   margin-bottom: 8px;
   color: #00dbde;
 }
+
+/* CODE BLOCK */
+pre {
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-height: 150px;
+  font-size: 13px;
+}
+
+/* BUTTONS INSIDE CARD */
+.snippet button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* SEARCH BAR */
+.right input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* TOAST */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#00dbde, #fc00ff);
+  border-radius: 10px;
+    }
